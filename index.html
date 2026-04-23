@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" onclick="jump()">
+<head>
+<meta charset="UTF-8">
+<title>Sabrina's Dino Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="startScreen">
+	<h1>Dino Game</h1>
+		<button onclick="startGame()">Start Game</button>
+	</div>
+	<div class="game">
+	    <div id="character"></div>
+		<div id="block"></div>
+		<div id="gameOverScreen">
+		<div id="gameOverBox">
+			<h2>Ouch!</h2>
+			<p id="finalScore"></p>
+			<button onclick="restartGame()">Try Again</button>
+			</div>
+		</div>
+	</div>
+	<p>Score: <span id="scoreSpan"></span></p>
+	<button id="muteBtn">🔊 Mute</button>
+	<audio id="bgMusic" loop>
+	<source src="657568__josefpres__8-bit-game-loop-009-simple-mix-4-long-120-bpm.wav" type="audio/wav">
+	</audio>
+	<audio id="jumpSound">
+	<source src="362328__jofae__platform-jump.mp3" type="audio/mpeg">
+	</audio>
+</body>
+	<script src="script.js"></script>
+</html>

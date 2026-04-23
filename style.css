@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+.game {
+	position: relative;
+	width: 500px;
+	height: 200px;
+	border: 5px solid black;
+	margin: auto;
+	
+	background-image: url("DinosaurJungleDomain.gif");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#character {
+	height: 80px; 
+	width: 120px;
+	background-image: url("OddDino.gif");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	position: absolute;
+	left: 25px;
+	bottom: 0;
+}
+#block {
+	background-image: url("TheStone.webp");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	left: 500px;
+	bottom: 0;
+	animation: block 1.5s infinite linear;
+}
+#gameOverScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	display: none;
+	
+	justify-content: center;
+	align-items: center;
+	
+	background-color: rgba(0,0,0,0.5);
+}
+#gameOverBox {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	
+}	
+#startScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	
+}
+@keyframes block {
+	0%{left: 501px}
+	30%{left: 351px}
+	70%{left: 150px}
+	100%{left: -25px}
+}
+.animate {
+	animation: jump 0.3s linear;
+}
+@keyframes jump {
+	0%{bottom: 0px;}
+	30%{bottom: 120px;}
+	70%{bottom: 120px;}
+	100%{bottom: 0px;}
+}
