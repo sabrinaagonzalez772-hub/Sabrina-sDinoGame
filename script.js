@@ -42,7 +42,7 @@ function jump(){
 var gameInterval = setInterval (function(){
 let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
 let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-if(blockLeft<60 && blockLeft>-60 && characterBottom < 50) {
+if(blockLeft<40 && blockLeft>-40 && characterBottom < 50) {
 	gameRunning = false;
 	block.style.animation = "none";
 	bgMusic.pause();
@@ -70,7 +70,7 @@ function restartGame(){
 		let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
 		let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 		
-		if(blockLeft < 60 && blockLeft > -60 && characterBottom < 50) {
+		if(blockLeft < 40 && blockLeft > -40 && characterBottom < 50) {
 			gameRunning = false;
 			clearInterval(gameInterval);
 			
