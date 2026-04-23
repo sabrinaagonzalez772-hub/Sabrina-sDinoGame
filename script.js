@@ -37,7 +37,7 @@ function jump(){
 	character.classList.add("animate");
 	    setTimeout(function(){
 			character.classList.remove("animate");
-		},300);
+		},500);
 }
 var gameInterval = setInterval (function(){
 let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
